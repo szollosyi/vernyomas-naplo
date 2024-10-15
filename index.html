@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vérnyomás Napló</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Vérnyomás Napló</h1>
+        <label for="username">Felhasználónév:</label>
+        <input type="text" id="username" placeholder="Add meg a neved">
+
+        <label for="date">Dátum:</label>
+        <input type="date" id="date">
+
+        <label for="systolic">Szisztolés (felső) vérnyomás:</label>
+        <input type="number" id="systolic" placeholder="Pl.: 120">
+
+        <label for="diastolic">Diasztolés (alsó) vérnyomás:</label>
+        <input type="number" id="diastolic" placeholder="Pl.: 80">
+
+        <label for="pulse">Pulzus:</label>
+        <input type="number" id="pulse" placeholder="Pl.: 75">
+
+        <button onclick="addEntry()">Adat rögzítése</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Dátum</th>
+                    <th>Szisztolé</th>
+                    <th>Diasztolé</th>
+                    <th>Pulzus</th>
+                    <th>Kategória</th>
+                </tr>
+            </thead>
+            <tbody id="logTable">
+                <!-- Itt jelennek meg a rögzített adatok -->
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
