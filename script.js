@@ -32,7 +32,7 @@ const usersData = {};
                 usersData[username] = [];
             }
 
-            usersData[username].push({ date, systolic, diastolic, pulse, category });
+            usersData[username].push({username, date, systolic, diastolic, pulse, category });
 
             displayData(username);
         }
@@ -43,6 +43,7 @@ const usersData = {};
 
             usersData[username].forEach(entry => {
                 const row = `<tr>
+                    <td>${entry.username}</td>
                     <td>${entry.date}</td>
                     <td>${entry.systolic}</td>
                     <td>${entry.diastolic}</td>
@@ -52,3 +53,12 @@ const usersData = {};
                 logTable.innerHTML += row;
             });
         }
+
+        document.getElementById("adatokLetoltese").addEventListener("click", function() {
+    let logTable = document.getElementById("logTable").innerHTML;
+    let blob = new Blob([logTable], { type: "text/plain;charset=utf-8" });
+    let link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "adatok.txt";
+    link.click();
+})

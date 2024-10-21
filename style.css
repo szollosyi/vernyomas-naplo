@@ -3,14 +3,20 @@ body {
     background-color: #e7e7e7;
     margin: 0;
     padding: 20px;
+    background-image: url('vernyomas.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .container {
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 60px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    float: left;
+    text-align: center;
+    background-color: #33b69c;
 }
 h1 {
     text-align: center;
@@ -39,6 +45,8 @@ button {
     transition: all 0.3s ease-in-out;
     border: 1px solid black;
     box-shadow: 0 0 0 0 black;
+    margin: 10px;
+    display: inline-block;
   }
   
   button:hover {
